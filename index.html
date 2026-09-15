@@ -10,202 +10,203 @@
   <meta property="og:description" content="Welcome to the workshop.">
   <meta property="og:image" content="https://syam.pw/og-image.png">
   <meta property="og:url" content="https://syam.pw/">
-  <meta property="og:type" content="website">
-
-  <title>Syam's Product Workshop</title>
-  <style>
-    :root {
-      --ink: #111;
-      --muted: #666;
-      --line: #e8e8e8;
-      --max: 1040px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: url(bg.png) repeat;
-      color: var(--ink);
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    main {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .page {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-      padding: 34px 0 48px;
-    }
-
-    .name {
-      margin: 0 0 12px;
-      text-align: center;
-      font-size: clamp(.72rem, 1.2vw, .82rem);
-      font-weight: 650;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-
-    .art-wrap {
-      position: relative;
-      width: min(100%, 820px);
-      margin: 0 auto;
-      isolation: isolate;
-    }
-
-    .art-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
-      user-select: none;
-      -webkit-user-drag: none;
-      opacity: 0.82;
-      padding-bottom: 1em;
-      Xborder-bottom: 1px solid #abc;
-      margin-bottom: 3em;
-      Xbox-shadow: 0 2em 6px -6px rgba(0, 0, 0, 0.3);
-    }
-
-    .steam {
-      position: absolute;
-      left: 71.8%;
-      top: 55.6%;
-      width: 5.4%;
-      height: 14%;
-      overflow: visible;
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    .steam path {
-      fill: none;
-      stroke: #111;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      opacity: 0;
-      transform-box: fill-box;
-      transform-origin: center bottom;
-      animation: steam-rise 4.6s ease-in-out infinite;
-    }
-
-    .steam path:nth-child(2) { animation-delay: 1.5s; }
-    .steam path:nth-child(3) { animation-delay: 3s; }
-
-    @keyframes steam-rise {
-      0% {
-        opacity: 0;
-        transform: translate3d(0, 10px, 0) scale(.88) rotate(-2deg);
-      }
-      18% { opacity: .36; }
-      48% {
-        opacity: .28;
-        transform: translate3d(4px, -9px, 0) scale(1.03) rotate(3deg);
-      }
-      78% { opacity: .14; }
-      100% {
-        opacity: 0;
-        transform: translate3d(-3px, -29px, 0) scale(1.12) rotate(-3deg);
-      }
-    }
-
-    .intro {
-      width: min(100%, 690px);
-      margin: -8px auto 0;
-      text-align: center;
-      padding: 0 12px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 4.2rem);
-      line-height: .98;
-      letter-spacing: -.045em;
-      font-weight: 700;
-    }
-
-    .lede {
-      margin: 24px auto 0;
-      max-width: 620px;
-      font-size: clamp(1rem, 1.8vw, 1.18rem);
-      line-height: 1.72;
-      color: #2f2f2f;
-    }
-
-    .lede + .lede { margin-top: 14px; }
-
-    .workshop {
-      font-weight: 650;
-      color: var(--ink);
-    }
-
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 28px;
-      padding: 9px 13px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: .82rem;
-      letter-spacing: .02em;
-    }
-
-    .status::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #111;
-      animation: pulse 1.3s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: .35; }
-      50% { opacity: 1; }
-    }
-
-    footer {
-      width: min(calc(100% - 32px), var(--max));
-      margin: auto auto 0;
-      padding: 40px 0 28px;
-      text-align: center;
-      color: #777;
-      font-size: .78rem;
-    }
-
-    footer a {
-      color: inherit;
-      text-underline-offset: 3px;
-    }
-
-    @media (max-width: 640px) {
-      .page { padding-top: 24px; }
-      .name { margin-bottom: 6px; }
-      .art-wrap { width: 100%; }
-      .intro { margin-top: -2px; }
-      .lede { line-height: 1.62; }
-      footer { padding-top: 34px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .steam path,
-      .status::before {
-        animation: none;
-      }
-      .steam path { opacity: .15; }
-    }
-  </style>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a6026424c974b6c8cd69815c1a6690a"}'></script><!-- End Cloudflare Web Analytics -->
+      <meta property="og:type" content="website">
+          
+          <title>Syam's Product Workshop</title>
+          <link rel="icon" href="/favicon.ico" type="image/x-icon">
+          <style>
+              :root {
+                  --ink: #111;
+                  --muted: #666;
+                  --line: #e8e8e8;
+                  --max: 1040px;
+              }
+              
+              * { box-sizing: border-box; }
+              
+              html { scroll-behavior: smooth; }
+              
+              body {
+                  margin: 0;
+                  background: url(bg.png) repeat;
+                  color: var(--ink);
+                  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                  -webkit-font-smoothing: antialiased;
+                  text-rendering: optimizeLegibility;
+              }
+              
+              main {
+                  min-height: 100svh;
+                  display: flex;
+                  flex-direction: column;
+              }
+              
+              .page {
+                  width: min(calc(100% - 32px), var(--max));
+                  margin: 0 auto;
+                  padding: 34px 0 48px;
+              }
+              
+              .name {
+                  margin: 0 0 12px;
+                  text-align: center;
+                  font-size: clamp(.72rem, 1.2vw, .82rem);
+                  font-weight: 650;
+                  letter-spacing: .18em;
+                  text-transform: uppercase;
+              }
+              
+              .art-wrap {
+                  position: relative;
+                  width: min(100%, 820px);
+                  margin: 0 auto;
+                  isolation: isolate;
+              }
+              
+              .art-wrap img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                  user-select: none;
+                  -webkit-user-drag: none;
+                  opacity: 0.82;
+                  padding-bottom: 1em;
+                  Xborder-bottom: 1px solid #abc;
+                  margin-bottom: 3em;
+                  Xbox-shadow: 0 2em 6px -6px rgba(0, 0, 0, 0.3);
+              }
+              
+              .steam {
+                  position: absolute;
+                  left: 71.8%;
+                  top: 55.6%;
+                  width: 5.4%;
+                  height: 14%;
+                  overflow: visible;
+                  pointer-events: none;
+                  z-index: 2;
+              }
+              
+              .steam path {
+                  fill: none;
+                  stroke: #111;
+                  stroke-width: 1.5;
+                  stroke-linecap: round;
+                  opacity: 0;
+                  transform-box: fill-box;
+                  transform-origin: center bottom;
+                  animation: steam-rise 4.6s ease-in-out infinite;
+              }
+              
+              .steam path:nth-child(2) { animation-delay: 1.5s; }
+              .steam path:nth-child(3) { animation-delay: 3s; }
+              
+              @keyframes steam-rise {
+                  0% {
+                      opacity: 0;
+                      transform: translate3d(0, 10px, 0) scale(.88) rotate(-2deg);
+                  }
+                  18% { opacity: .36; }
+                  48% {
+                      opacity: .28;
+                      transform: translate3d(4px, -9px, 0) scale(1.03) rotate(3deg);
+                  }
+                  78% { opacity: .14; }
+                  100% {
+                      opacity: 0;
+                      transform: translate3d(-3px, -29px, 0) scale(1.12) rotate(-3deg);
+                  }
+              }
+              
+              .intro {
+                  width: min(100%, 690px);
+                  margin: -8px auto 0;
+                  text-align: center;
+                  padding: 0 12px;
+              }
+              
+              h1 {
+                  margin: 0;
+                  font-size: clamp(2rem, 5vw, 4.2rem);
+                  line-height: .98;
+                  letter-spacing: -.045em;
+                  font-weight: 700;
+              }
+              
+              .lede {
+                  margin: 24px auto 0;
+                  max-width: 620px;
+                  font-size: clamp(1rem, 1.8vw, 1.18rem);
+                  line-height: 1.72;
+                  color: #2f2f2f;
+              }
+              
+              .lede + .lede { margin-top: 14px; }
+              
+              .workshop {
+                  font-weight: 650;
+                  color: var(--ink);
+              }
+              
+              .status {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 9px;
+                  margin-top: 28px;
+                  padding: 9px 13px;
+                  border: 1px solid var(--line);
+                  border-radius: 999px;
+                  color: var(--muted);
+                  font-size: .82rem;
+                  letter-spacing: .02em;
+              }
+              
+              .status::before {
+                  content: "";
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #111;
+                  animation: pulse 1.3s ease-in-out infinite;
+              }
+              
+              @keyframes pulse {
+                  0%, 100% { opacity: .35; }
+                  50% { opacity: 1; }
+              }
+              
+              footer {
+                  width: min(calc(100% - 32px), var(--max));
+                  margin: auto auto 0;
+                  padding: 40px 0 28px;
+                  text-align: center;
+                  color: #777;
+                  font-size: .78rem;
+              }
+              
+              footer a {
+                  color: inherit;
+                  text-underline-offset: 3px;
+              }
+              
+              @media (max-width: 640px) {
+                  .page { padding-top: 24px; }
+                  .name { margin-bottom: 6px; }
+                  .art-wrap { width: 100%; }
+                  .intro { margin-top: -2px; }
+                  .lede { line-height: 1.62; }
+                  footer { padding-top: 34px; }
+              }
+              
+              @media (prefers-reduced-motion: reduce) {
+                  .steam path,
+                  .status::before {
+                      animation: none;
+                  }
+                  .steam path { opacity: .15; }
+              }
+          </style>
+          <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a6026424c974b6c8cd69815c1a6690a"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
   <main>
